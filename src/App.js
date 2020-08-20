@@ -2,12 +2,11 @@ import React from 'react';
 import './App.css';
 import Header from './Header';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import TinderCards from './TinderCards';
 
 function App() {
   return (
-    <div className="App">
-
-      
+    <div className="App">      
       <Header />
       <Router>
         <Switch>
@@ -15,14 +14,11 @@ function App() {
             <h1>I am the chat page</h1>
           </Route>
           <Route path="/">
-            <h1>I am home</h1>
+            <TinderCards/>
           </Route>
         </Switch>
-
       </Router>
-
     </div>
-    
     );
   }
   
