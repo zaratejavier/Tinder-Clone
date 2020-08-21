@@ -4,7 +4,16 @@ import "./TinderCards.css"
 import database from './firebase'
 
 const TinderCards = () => {
-  const [people, setPeople] = useState([]);
+  const [people, setPeople] = useState([
+    // {
+    //   name: "Steve Jobs",
+    //   url: "https://www.gstatic.com/tv/thumb/persons/476283/476283_v9_ba.jpg"
+    // },
+    // {
+    //   name: "Bill Gates",
+    //   url: "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iHiqcJBsYq6c/v0/640x-1.jpg"
+    // }
+  ])
 
   useEffect(() => {
     //we got to firebase to the people 'collection' and listen to whenever anything changes inside that collection
@@ -22,7 +31,7 @@ const TinderCards = () => {
 
   return (
     <div>
-      <h1>Tinder Cards</h1>
+      {/* <h1>Tinder Cards</h1> */}
 
       <div className="tinderCards__cardContainer">
         {people.map((person) => (
