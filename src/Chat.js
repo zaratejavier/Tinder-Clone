@@ -1,5 +1,6 @@
 import React from 'react'
 import { Avatar } from '@material-ui/core'
+import './Chat.css'
 
 const Chat = ({name, message, profilePic, timestamp}) => {
   return (
