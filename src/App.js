@@ -4,6 +4,7 @@ import Header from './Header';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import TinderCards from './TinderCards';
 import SwipeButtons from './SwipeButtons';
+import Chats from './Chats';
 
 function App() {
   return (
@@ -11,8 +12,8 @@ function App() {
       <Router>
         <Switch>
           <Route path="/chat">
-            <Header backButton="/"/>
-            <h1>I am the chat page</h1>
+            <Header backButton="/"/> 
+            <Chats/>
           </Route>
           <Route path="/">
             <Header />
