@@ -3,6 +3,7 @@ import "./ChatScreen.css"
 import { Avatar } from '@material-ui/core'
 
 const ChatScreen = () => {
+  const [input, setInput] = useState('') // this will keep track of what we are typing in the input field
   const [messages, setMessages] = useState([
     {
       name: 'Ellen DEl',
@@ -18,6 +19,12 @@ const ChatScreen = () => {
       message: "Hey how are you Ellen?"
     }
   ])
+
+  const handleSend = (e) => {
+    e.preventDefault();
+    setMessages([...messages, { message: input }])
+    setInput('');
+  }
   return (
     <div className="chatScreen">
       <p className="chatScreen_timeStamp">YOU MATCHED WITH ELLEN ON 10/25/20</p>
@@ -40,8 +47,14 @@ const ChatScreen = () => {
       ))}
       
         <form className="chatScreen_input">
-          <input placeholder="Type a message" type="text" className="chatScreen_inputField" />
-          <button className="chatScreen_inputButton">Send</button>
+        <input
+          value={input} // the value will be the same as the input state
+          onChange={e => setInput(e.target.value)}
+          placeholder="Type a message"
+          type="text"
+          className="chatScreen_inputField"
+        />
+        <button onClick={handleSend} type="submit" className="chatScreen_inputButton">Send</button>
         </form>
       </div>
   )

@@ -32,9 +32,3 @@ function App() {
   }
   
   export default App;
-  
-  {/* Tinder Cards */}
-  {/* Button below tinder card */}
-
-  {/* Chat Screens */}
-  {/* Individual chat screen */}
